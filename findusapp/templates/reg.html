@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="regpage">
+  <div class="container mb-3">
+    <center>
+      <img src="{% static '/images/reg.jpg' %}" alt="" style="height: 100px; width:100px; border-radius: 50px; ">
+    </center>
+    <div class="heading">
+      Create Account
+    </div>
+    <form method="POST" action="reg" enctype="multipart/form-data">
+    {% csrf_token %}
+      <div class="form-group mt-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user fa-lg" ></i></span>
+          </div>
+          <input type="text" name="fname"class="form-control" required placeholder="First Name">
+        </div>
+      </div>
+        <div class="form-group mt-3">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user fa-lg" ></i></span>
+            </div>
+            <input type="text" name="lname"class="form-control" required placeholder="last Name">
+        </div>
+        </div>
+        <div class="form-group mt-3">
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user fa-lg" ></i></span>
+                </div>
+                <input type="text" name="username"class="form-control" required placeholder="User Name">
+            </div>
+        </div>
+            {% if user_taken %}
+                <div style="color: red;">Username Already Been Taken</div>
+                {% endif %}
+                <div class="form-group mt-3">
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-at fa-lg" ></i></span>
+                    </div>
+                    <input type="email" name="email"class="form-control" required placeholder="Email Address">
+                </div>
+                </div>
+                {% if email_taken %}
+                <div style="color: red;" >Email Already In Use</div>
+                {% endif %}
+            <div class="form-group mt-3">
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-key fa-lg" ></i></span>
+                    </div>
+                    <input type="password" name="password1"class="form-control" required placeholder="Password">
+                </div>
+            </div>
+                <div class="form-group mt-3">
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-key fa-lg" ></i></span>
+                        </div>
+                        <input type="password" name="password2"class="form-control" required placeholder="Comform Password">
+                    </div>
+                  </div>
+                    {% if password_match %}
+                <div style="color: red;" >Password Not Matched </div>
+                {% endif %} 
+
+            <center>
+                <div class="inline mt-3 col-md-12 col-sm-12">
+                    <input type="submit" class="btn btn-primary mb-2 " value="Create" style="width: 200px;">
+                    <input type="reset"  class="btn btn-primary mb-2" value="Reset" style="width: 200px;">
+                    
+                </div>
+                <a href="login" class="">Login Here</a>
+            </center>   
+            
+
+        </div>
+    </form>
+</div>
+</div>
+<!--====================form close =======================================================-->
+{% endblock %}

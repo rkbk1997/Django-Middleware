@@ -1,0 +1,57 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+<div class="top">
+    <div class="card">
+        <img src="{% static '/images/top.jpg' %}" alt="">
+    </div>
+</div>
+<div class="service">
+    <div class="card-deck">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{% static '/images/login.jpg' %}" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">"In 2014, my business had come to a halt.
+                       This is when I joined Find Us, and there has been no looking back."<br>
+                       <span style="font-weight: bold;">Surender Bhatia, Limestone</span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{% static '/images/login.jpg' %}" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">"The dream of doing something of my own brought me to Find Us,
+                       and I am living that dream now."<br>
+                    <span style="font-weight: bold;">Chand M, Saran Retails</span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{% static '/images/login.jpg' %}" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">"I joined Find Us when the real estate business had hit
+                       rock bottom. I am one of the top sellers in Footwear category now."<br>
+                       <span style="font-weight: bold;">Parvesh Goel, Longwalk</span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+{% endblock %}

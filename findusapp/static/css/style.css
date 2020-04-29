@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: url(../cover1.jpg) no-repeat !important;
+    background-position: center;
+    background-size: cover;
+}
+/*-----------------------menu--------------------------------------------*/
+.menu ul li{
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+    list-style: none;
+    margin-right: 15px;
+}
+.menu ul li h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+/*-----------------------------------------------------------------------*/
+.header{
+    -webkit-box-shadow: 0px 15px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 15px 11px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 15px 11px 0px rgba(0,0,0,0.75);
+    transition-duration: .5s;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+/*--------------------category--------------------------------------------*/
+.category{
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.category h1{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+}
+.category a{
+    color: black;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+}
+.category a img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); 
+    overflow: hidden !important;
+}
+.category a img{
+    transition-duration: .5s;
+    overflow: hidden !important;
+}
+/*-------------------------car-rec------------------------------*/
+.car-rec{
+    background: #FFFFFF;
+    padding: 30px;
+    border-bottom: 1px gray solid;
+}
+.car-rec .card {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+/*.car-rec .card .card-body{
+    border-bottom: 1px gray solid;
+}*/
+.car-rec .card .card-body input{
+    float: right;
+}
+.car-rec h3{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    display: inline-block;
+}
+.car-rec .container .row a{
+    text-decoration: none;
+    color: black;
+}
+.car-rec .container .row img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); 
+    overflow: hidden !important;
+}
+.car-rec .container .row img{
+    transition-duration: .5s;
+    overflow: hidden !important;
+}
+/*----------------------------- footer css------------------------------*/
+footer .container-fluid{
+    background: #EBEEEF;
+}
+footer .container-fluid .card{
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+footer .container-fluid .card .card-title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer .container-fluid .card p{
+    text-align: left !important;
+}
+footer .container-fluid .card p a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgb(136, 137, 138);
+    text-align: left !important;
+}
+footer .container-fluid .card p a:hover{
+    color: black;
+    text-decoration: none !important;
+}
+.footer2 .card .card-body{
+    background: #002F34;
+    width: 100%;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+/*----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+.table-wrap {
+    position: relative;
+    z-index: 10; }
+    @media (max-width: 768px) {
+  .table-wrap {
+        overflow-x: scroll; } }
+.heading .card{
+    border: none;
+    background: transparent;
+}
+.heading .card .card-body h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15px;
+    font-size: 40px;
+
+}
+.loginpage .container-fluid .row .form-container{
+    border: 0px solid #fff;
+    padding: 30px 40px;
+    margin-top:0px;
+    border-radius: 50px 0 50px 0;
+    -webkit-box-shadow: -5px 6px 21px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 6px 21px 8px rgba(0,0,0,0.75);
+    box-shadow: -5px 6px 21px 8px rgba(0,0,0,0.75);
+}
+.loginpage .container-fluid .row .form-container img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+.loginpage .container-fluid .row .form-container h1{
+    text-align: center;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.loginpage .container-fluid .row .form-container a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: black;
+}
+.loginpage .container-fluid .row .form-container a:hover{
+    color: #fff;
+}
+/*-----------reg page------------------*/
+.regpage .container .heading{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.regpage .container {
+    border-radius: 50px 0px 50px 0px;
+    height: 620px !important;
+    margin-top: 30px; 
+    max-width: 600px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    -webkit-box-shadow: -2px -1px 26px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 26px 8px rgba(0,0,0,0.75);
+    box-shadow: -2px -1px 26px 8px rgba(0,0,0,0.75);
+
+}
+.regpage .container a{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    
+}
+.regpage .container a:hover{
+    color: #fff;
+}
+/*----------------------------- service page---------------------------------------*/
+.top{
+    background: #FAFBFC;
+    border: 1px #fff solid;
+}
+.service{
+    background: #FAFBFC;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.service .card{
+    background: transparent;
+    border: none;
+}
+.service .card .card-body .card-title{
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+}
+.subcate label{
+    color: #fff !important;
+}
+.addcate label{
+    color: #fff !important;
+}
+table.dataTable tbody tr {
+    background-color: transparent !important;
+}
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #fff !important;
+}
+dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    color: #fff !important;
+}
+.slider-form {
+    position: absolute;
+    width: 350px;
+    top:22% ;
+    right: 15%;
+    background-color: rgba(214, 210, 210, 0.8);
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    z-index: 99;
+}
+.slider-form h1,p{
+    color: #fff;
+    text-align: center;
+}
+.headermain .navbar ul li a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+.table tr:hover{
+    background: #002F34 !important;
+    color: #fff !important;
+}

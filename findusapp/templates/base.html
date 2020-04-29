@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{% static '/images/location.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us</title>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{% static '/css/style.css/' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light menu">
+    <center>
+      <ul>
+        <li>
+          <div><a href="index" style="text-decoration: none;"><h1>
+                <img src="{% static '/images/location.png' %}" style="height: 30px;" >
+                Find Us</h1></a>
+            </div>
+          </li>
+          <li><div class="col-auto">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-map-marker"></i></div>
+                  </div>
+                  <select class="form-control">
+                    <option value="0">Choose Your Loaction</option>
+                    <option value="1">Current Loacation</option>
+                    <option value="1">Indore</option>
+                    <option value="1">Bhopal</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Mumbai</option>
+                  </select>
+                </div>
+              </div>
+          </li>
+          <li><div class="col-auto">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Any Service That You Want" style="width: 300px;">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><a href=""><i class="fa fa-search"></i></a></div>
+                    </div>
+                  </div>
+              </div>
+          </li>
+          <li><div>
+                <a href="" style="text-decoration: none;color: blue;"><i class="fa fa-bell fa-lg"></i></a>
+                {% if user.is_authenticated %}
+                <a href="logout"><button class="btn btn-primary"><i class="fa fa-power-off"></i>&nbsp;Logout</button> </a>
+                {% else %}
+                <a href="login"><button class="btn btn-primary"><i class="fa fa-user"></i>&nbsp;Login/Sign Up</button> </a>
+                {% endif %}
+              </div>
+          </li>
+          <li><div>
+                {% if user.is_authenticated %}
+                <a href="service"><button class="btn btn-primary">More</button></a>
+                {% endif %}
+              </div>
+          </li>
+          <li><div>
+                {% if user.is_authenticated %}
+                <a href="" style="text-transform:uppercase;"><i class="fa fa-user fa-lg" style="color: blue;"></i>&nbsp;WellCome {{ user.username }}</a>
+                {% endif %}
+              </div>
+          </li>
+    </ul>
+    </center>
+  </nav>
+  
+{% block content %}
+
+
+
+{% endblock %}
+    <footer>
+    <div class="container-fluid pl-5 pr-5">
+            <div class="card-group">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">POPULAR LOCATIONS</h5>
+                    <p class="card-text">
+                        <a href="">Kolkata</a><br>
+                        <a href="">mumbai</a><br>
+                        <a href="">Chennai</a><br>
+                        <a href="">pune</a><br>
+                    </p>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">TRENDING LOCATIONS</h5>
+                    <p class="card-text">
+                        <a href="">Bhubneswar</a><br>
+                        <a href="">Hydrabad</a><br>
+                        <a href="">Nashik</a><br>
+                        <a href="">Raipur</a><br>
+                    </p>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">ABOUT US</h5>
+                    <p class="card-text">
+                        <a href="">About Find Us Group</a><br>
+                        <a href="">Careers</a><br>
+                        <a href="">Contact Us</a><br>
+                        <a href="">Find Us People</a><br>
+                        <a href="">Jobs</a>
+                    </p>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">find us</h5>
+                    <p class="card-text">
+                        <a href="">Help</a><br>
+                        <a href="">Site map</a><br>
+                        <a href="">Legal & Privacy information</a><br>
+                    </p>
+                  </div>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">FOLLOW US</h5>
+                    <p class="card-text">
+                        <a href="" style="display: inline-block;"><i style="font-size: 25px;" class="p-2 fa fa-facebook "></i></a>
+                        <a href="" style="display: inline-block;"><i style="font-size: 25px;" class="p-2 fa fa-instagram"></i></a>
+                        <a href="" style="display: inline-block;"><i style="font-size: 25px;" class="p-2 fa fa-twitter "></i></a>
+                        <a href="" style="display: inline-block;"><i style="font-size: 25px;" class="p-2 fa fa-youtube"></i></a>
+                    </p>
+                  </div>
+                  </div>
+              </div>   
+        </div>
+    </footer>   
+    <div class="footer2">
+        <div class="card">
+            <div class="card-body">
+                © Copyright 2020 All Rights Reserved By Find US Group<br> Design By:- Ravi Kumar
+            </div>
+          </div>
+    </div> 
+
+
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+        $('#mydatatable').DataTable();
+    } );
+      </script>
+</body>
+</html>
